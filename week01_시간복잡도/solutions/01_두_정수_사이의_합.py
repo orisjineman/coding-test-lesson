@@ -8,9 +8,15 @@
 
 
 def solution(a: int, b: int) -> int:
-    # TODO: 여기 직접 구현
-    pass
+    if a > b:
+        a, b = b, a
 
+    result = 0
+
+    for i in range(a, b + 1):
+        result += i
+
+    return result
 
 if __name__ == "__main__":
     print(solution(3, 5))   # 예상 결과: 12
