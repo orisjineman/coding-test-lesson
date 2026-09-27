@@ -25,7 +25,9 @@ strings	n	return
 "abce"와 "abcd", "cdx"의 2번째 인덱스 값은 "c", "c", "x"입니다. 따라서 정렬 후에는 "cdx"가 가장 뒤에 위치합니다.
 "abce"와 "abcd"는 사전순으로 정렬하면 "abcd"가 우선하므로, 답은 ["abcd", "abce", "cdx"] 입니다.
 
-# 시간복잡도: (직접 계산해서 적어보기)
+# 시간복잡도: O(n log n)
+# - sorted()는 내부적으로 팀소트(Timsort) 사용 -> 정렬 자체가 O(n log n)
+# - key=lambda s: (s[n], s) 는 원소당 O(1)이라 전체 시간복잡도에 안 묻힘 (O(n)이라 n log n에 흡수됨)
 """
 
 
